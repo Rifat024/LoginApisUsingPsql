@@ -11,9 +11,9 @@ public class BaseDemoApiTest extends BaseApiTest {
         return "/api/v1";
     }
 
-    public RequestSpecification requestSpecification(){
+    public RequestSpecification requestSpecification() {
         return new RequestSpecBuilder()
-                .addHeader("content-type","application/json")
+                .addHeader("content-type", "application/json")
                 .build();
     }
 }

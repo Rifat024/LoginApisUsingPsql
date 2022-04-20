@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.given;
 
 public class PersonPostTest extends BaseDemoApiTest {
     @Test(enabled = true, description = "Check if user can post username and password")
-    void postUserLoginAndPassword(){
+    void postUserLoginAndPassword() {
         given()
                 .spec(requestSpecification())
                 .body(personInfo())
@@ -23,8 +23,8 @@ public class PersonPostTest extends BaseDemoApiTest {
     }
 
 
-    private PersonInfo personInfo(){
-        return  new PersonInfo(LoremIpsum.getInstance().getTitle(2),
+    private PersonInfo personInfo() {
+        return new PersonInfo(LoremIpsum.getInstance().getTitle(2),
                 LoremIpsum.getInstance().getTitle(1));
     }
 }

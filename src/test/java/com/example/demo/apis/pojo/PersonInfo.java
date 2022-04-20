@@ -2,16 +2,16 @@ package com.example.demo.apis.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.UUID;
-
 public class PersonInfo {
-  //  @JsonProperty("id")
-  //  private UUID id;
+    //  @JsonProperty("id")
+    //  private UUID id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("password")
     private String password;
-    public PersonInfo(){}
+
+    public PersonInfo() {
+    }
 
     public PersonInfo(String name, String password) {
         this.name = name;
