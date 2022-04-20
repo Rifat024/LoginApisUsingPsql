@@ -1,4 +1,4 @@
-package com.example.demo.DataSource;
+package com.example.demo.dataSource;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.boot.context.properties.ConfigurationProperties;

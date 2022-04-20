@@ -1,6 +1,14 @@
 app:
   datasource:
-    jdbc-url: jdbc:postgresql://localhost:5432/postgres
+    jdbc-url: jdbc:postgresql://localhost:5432/demodb
     username: postgres
     password: password
     pool-size: 30
+
+server:
+     port: 8080
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
