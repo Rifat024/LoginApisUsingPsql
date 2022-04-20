@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.given;
 
 public class PersonDeleteTest extends BaseDemoApiTest {
 
-        @Test
+        @Test(enabled = true,description = "Check if user can delete username and password using id")
         void deletePersonLoginAndPasswordById(){
                 String id="f8e5c651-5a21-4796-8c96-ca024bf004ee";
                 given()

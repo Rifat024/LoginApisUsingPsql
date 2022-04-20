@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class PersonPostTest extends BaseDemoApiTest {
-    @Test
+    @Test(enabled = true, description = "Check if user can post username and password")
     void postUserLoginAndPassword(){
         given()
                 .spec(requestSpecification())

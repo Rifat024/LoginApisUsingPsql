@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.given;
 
 public class PersonGetTest extends BaseDemoApiTest {
 
-    @Test
+    @Test(enabled = true,description = "Check if user can get all person username and password ")
      void getAllUserLoginAndPassword(){
         given()
                 .spec(requestSpecification())
@@ -19,7 +19,7 @@ public class PersonGetTest extends BaseDemoApiTest {
                 .statusCode(200);
     }
 
-    @Test
+    @Test(enabled = true,description = "Check if user can get username and password using id")
     void getUserLoginAndPasswordById(){
        String id="f8e5c651-5a21-4796-8c96-ca024bf004ee";
         given()

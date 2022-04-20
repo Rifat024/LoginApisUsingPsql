@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.given;
 
 public class PersonUpdateTest extends BaseDemoApiTest {
 
-    @Test
+    @Test(enabled = true, description = "Check if user can update username and password")
     void updateUserLoginAndPasswordById(){
         String id="f8e5c651-5a21-4796-8c96-ca024bf004ee";
         given()
