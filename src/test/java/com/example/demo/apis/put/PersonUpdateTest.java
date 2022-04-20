@@ -11,13 +11,14 @@ public class PersonUpdateTest extends BaseDemoApiTest {
 
     @Test
     void updateUserLoginAndPasswordById(){
+        String id="f8e5c651-5a21-4796-8c96-ca024bf004ee";
         given()
                 .spec(requestSpecification())
                 .body(personInfo())
                 .log().uri()
                 .log().body()
                 .when()
-                .put("/person/13fa0d3e-a3f6-4a26-9551-3f6ad1fcad07")
+                .put("/person/{id}",id)
                 .then()
                 .log().body()
                 .statusCode(200);

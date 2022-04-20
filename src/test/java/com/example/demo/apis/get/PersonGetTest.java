@@ -21,11 +21,12 @@ public class PersonGetTest extends BaseDemoApiTest {
 
     @Test
     void getUserLoginAndPasswordById(){
+       String id="f8e5c651-5a21-4796-8c96-ca024bf004ee";
         given()
                 .spec(requestSpecification())
                 .log().uri()
                 .when()
-                .get("/person/0c71a301-333a-478d-b9ff-0db8fbe44517")
+                .get("/person/{id}",id)
                 .then()
                 .log().body()
                 .statusCode(200);
