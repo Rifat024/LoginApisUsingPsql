@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.UUID;
 
 public class PersonInfo {
-    @JsonProperty("id")
-    private UUID id;
+  //  @JsonProperty("id")
+  //  private UUID id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("password")
@@ -18,13 +18,13 @@ public class PersonInfo {
         this.password = password;
     }
 
-    public UUID getId() {
+   /* public UUID getId() {
         return id;
     }
 
     public void setId(UUID id) {
         this.id = id;
-    }
+    }*/
 
     public String getName() {
         return name;

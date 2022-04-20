@@ -1,4 +1,4 @@
-package com.example.demo.apis.post;
+package com.example.demo.apis.put;
 
 import com.example.demo.apis.BaseDemoApiTest;
 import com.example.demo.apis.pojo.PersonInfo;
@@ -7,23 +7,25 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class PersonTest extends BaseDemoApiTest {
+public class PersonUpdateTest extends BaseDemoApiTest {
+
     @Test
-    void postUserLoginAndPassword(){
+    void updateUserLoginAndPasswordById(){
         given()
+                .spec(requestSpecification())
                 .body(personInfo())
                 .log().uri()
                 .log().body()
                 .when()
-                .post("/person")
+                .put("/person/13fa0d3e-a3f6-4a26-9551-3f6ad1fcad07")
                 .then()
                 .log().body()
                 .statusCode(200);
+
     }
 
-
     private PersonInfo personInfo(){
-        return  new PersonInfo(LoremIpsum.getInstance().getTitle(2),
-                LoremIpsum.getInstance().getTitle(1));
+        return new PersonInfo(LoremIpsum.getInstance().getTitle(2),
+                LoremIpsum.getInstance().getTitle(1) );
     }
 }
