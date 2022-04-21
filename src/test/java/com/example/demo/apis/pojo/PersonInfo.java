@@ -15,6 +15,12 @@ public class PersonInfo {
     public PersonInfo() {
     }
 
+    public PersonInfo(UUID id, String name, String password) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+    }
+
     public PersonInfo(String name, String password) {
         this.name = name;
         this.password = password;
