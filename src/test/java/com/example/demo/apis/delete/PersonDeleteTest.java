@@ -9,7 +9,7 @@ public class PersonDeleteTest extends BaseDemoApiTest {
 
     @Test(enabled = true, description = "Check if user can delete username and password using id")
     void deletePersonLoginAndPasswordById() {
-        String id = "0adaa0e2-e87c-4b47-b8f7-cf047381899c";
+        String id = "0c71a301-333a-478d-b9ff-0db8fbe44517";
         given()
                 .spec(requestSpecification())
                 .log().uri()

@@ -1,4 +1,4 @@
-package com.example.demo.dao;
+package com.example.demo.Repository;
 
 import com.example.demo.model.Person;
 import org.springframework.stereotype.Repository;
@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository("mockerDao")
-public class fakePersonDataAccessService  implements PersonDao{
+public class PersonDataAccessServiceMocker implements PersonDao{
 
     public static List<Person> dataBase=new ArrayList<>();
     @Override
